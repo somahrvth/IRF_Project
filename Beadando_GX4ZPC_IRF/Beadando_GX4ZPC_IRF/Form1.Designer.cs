@@ -28,13 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.menu_button = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // menu_button
+            // 
+            this.menu_button.Font = new System.Drawing.Font("Bahnschrift Condensed", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.menu_button.Location = new System.Drawing.Point(245, 156);
+            this.menu_button.Name = "menu_button";
+            this.menu_button.Size = new System.Drawing.Size(276, 133);
+            this.menu_button.TabIndex = 0;
+            this.menu_button.Text = "MENU";
+            this.menu_button.UseVisualStyleBackColor = true;
+            this.menu_button.Click += new System.EventHandler(this.menu_button_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menu_button);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button menu_button;
     }
 }
 

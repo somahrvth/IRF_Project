@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menuitems>
+<menuitem>
+    <type>food</type>
+    <diet>vegan</diet>
+    <name>Hummus platter with falafel</name>
+    <price>$7.99</price>
+    <description>
+   300 g of hummus with 10 freshly made crispy falafels
+   </description>
+    <calories>900</calories>
+</menuitem>
+  
+<menuitem>
+    <type>food</type>
+    <diet>vegan</diet>
+    <name>Oat fritters </name>
+    <price>$6.99</price>
+    <description>
+    Hungarian oat fritters with mashed potatoes, onions and braised cabbage 
+    </description>
+    <calories>820</calories>
+</menuitem>
+  
+<menuitem>
+    <type>food</type>
+    <diet>vegan</diet>
+    <name>Cellery soup </name>
+    <price>$4.49</price>
+    <description>
+    Creamy cellery soup with croutons and herbs
+    </description>
+    <calories>340</calories>
+</menuitem>
+  
+<menuitem>
+    <type>food</type>
+    <diet>vegan</diet>
+    <name>Thai Curry </name>
+    <price>$7.49</price>
+    <description>
+    Thai vegetable curry with lentil and brown rice
+    </description>
+    <calories>590</calories>
+</menuitem>
+
+<menuitem>
+    <type>food</type>
+    <diet>meatlover</diet>
+    <name>Penne Carbonara</name>
+    <price>$8.99</price>
+    <description>
+    Sweet tender leeks with golden smoky pancetta, cracked black pepper and Parmesan
+    </description>
+    <calories>900</calories> 
+</menuitem>
+  
+ <menuitem>
+    <type>food</type>
+     <diet>meatlover</diet>
+    <name>Sirloin Steak</name>
+    <price>$23.99</price>
+    <description>
+    Chargrilled to your liking and served with herby garlic butter, fresh horseradish, Parmesan, baby gem and funky chips
+    </description>
+    <calories>1100</calories>
+    </menuitem>
+  
+<menuitem>
+    <type>food</type>
+    <diet>meatlover</diet>
+    <name>Veal Milanese</name>
+    <price>$17.99</price>
+    <description>
+    Stuffed with prosciutto and fontal cheese, breadcrumbed and topped with a fried free-range egg and black summer truffle and skinny fries
+    </description>
+    <calories>1200</calories>
+</menuitem>
+  
+<menuitem>
+    <type>food</type>
+    <diet>meatlover</diet>
+    <name>Cheeseburger</name>
+    <price>$9.99</price>
+    <description>
+    beef patty, cheddar cheese, romaine lettuce, tomato, red onion, homemade burger sauce
+    </description>
+    <calories>890</calories>
+ </menuitem>
+
+<menuitem>
+  <type>drink</type>
+  <drinkcategory>soft</drinkcategory>
+	<name>Cola</name>
+	<price>$1.99</price>
+  </menuitem>
+  
+<menuitem>
+  <type>drink</type>
+  <drinkcategory>soft</drinkcategory>
+	<name>Lemonade with lime</name>
+	<price>$2.99</price>
+</menuitem>
+
+<menuitem>
+  <type>drink</type>
+  <drinkcategory>soft</drinkcategory>
+	<name> Elite tonic</name>
+	<price>$3.99</price>
+</menuitem>
+
+<menuitem>
+  <type>drink</type>
+  <drinkcategory>tea</drinkcategory>
+	<name> Peppermint Tea</name>
+	<price>$1.99</price>
+</menuitem>
+
+<menuitem>
+  <type>drink</type>
+  <drinkcategory>tea</drinkcategory>
+	<name> Roiboos Tea</name>
+	<price>$0.99</price>
+</menuitem>
+
+<menuitem>
+  <type>drink</type>
+  <drinkcategory>tea</drinkcategory>
+	<name> Green Tea</name>
+	<price>$1.49</price>
+</menuitem>
+</menuitems>
