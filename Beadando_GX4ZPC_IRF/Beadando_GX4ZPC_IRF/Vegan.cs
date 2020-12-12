@@ -18,10 +18,16 @@ namespace Beadando_GX4ZPC_IRF
     public partial class Vegan : Form
     {
         List<MenuItems> menulist = new List<MenuItems>();
+        DataTable dt = new DataTable();
         public Vegan()
         {
             InitializeComponent();
             this.CenterToScreen();
+
+            
+
+
+
 
             //XElement xdoc = XElement.Load("Menu.xml");
 
@@ -76,5 +82,75 @@ namespace Beadando_GX4ZPC_IRF
 
 
         }
+
+        private void textBox_searchbar_TextChanged(object sender, EventArgs e)
+        {
+            var searchedList = menulist.Where(p => p.name.ToLower().Contains(textBox_searchbar.Text.ToLower()) ||
+                                             p.description.ToLower().Contains(textBox_searchbar.Text.ToLower())).ToList();
+            dataGridView1.DataSource = searchedList;
+        }
+
+        private void comboBox_options_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox_options.SelectedIndex == 0)
+            {
+                var veganlist = menulist.Where(p => p.diet == "vegan" && p.type=="food").ToList();
+                dataGridView1.DataSource = veganlist;
+            }
+
+            else
+            {
+                if (comboBox_options.SelectedIndex == 1)
+                {
+                    var veganlist = menulist.Where(p => p.diet == "meatlover").ToList();
+                    dataGridView1.DataSource = veganlist;
+                }
+                else
+                {
+                    if (comboBox_options.SelectedIndex == 2)
+                    {
+                        var veganlist = menulist.Where(p => p.type == "drink").ToList();
+                        dataGridView1.DataSource = veganlist;
+                    }
+
+                    else
+                    {
+                        if (comboBox_options.SelectedIndex == 3)
+                        {
+
+                            dataGridView1.DataSource = menulist;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void checkBox_vegan_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_vegan.Checked)
+            {
+                var veganlist = menulist.Where(p => p.diet == "vegan").ToList();
+                dataGridView1.DataSource = veganlist;
+            }
+           
+
+            //if (checkBox_vegan.Checked == true)
+            //{
+            //    try
+            //    {
+            //        //Check an see what's in the dgv
+            //        DataView dv = new DataView(dt);
+            //        dv.RowFilter = " [diet] = " + checkBox_vegan.Text.ToLower().Trim();
+            //        dataGridView1.DataSource = dv;
+
+            //    }
+            //    catch (Exception)
+            //    {
+            //        MessageBox.Show("Can’t find the column", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+
+            //}
+        }
     }
     }
+    
