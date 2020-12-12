@@ -50,18 +50,18 @@
     <name>Penne Carbonara</name>
     <price>$8.99</price>
     <description>
-    Sweet tender leeks with golden smoky pancetta, cracked black pepper and Parmesan
+    Sweet tender leeks with golden smoky pancetta, parmesan
     </description>
     <calories>900</calories> 
 </menuitem>
   
  <menuitem>
     <type>food</type>
-     <diet>meatlover</diet>
+    <diet>meatlover</diet>
     <name>Sirloin Steak</name>
     <price>$23.99</price>
     <description>
-    Chargrilled to your liking and served with herby garlic butter, fresh horseradish, Parmesan, baby gem and funky chips
+    Chargrilled to your liking and served with herby garlic butter
     </description>
     <calories>1100</calories>
     </menuitem>
@@ -72,7 +72,7 @@
     <name>Veal Milanese</name>
     <price>$17.99</price>
     <description>
-    Stuffed with prosciutto and fontal cheese, breadcrumbed and topped with a fried free-range egg and black summer truffle and skinny fries
+    Stuffed with prosciutto and fontal cheese and eggs
     </description>
     <calories>1200</calories>
 </menuitem>
@@ -83,50 +83,80 @@
     <name>Cheeseburger</name>
     <price>$9.99</price>
     <description>
-    beef patty, cheddar cheese, romaine lettuce, tomato, red onion, homemade burger sauce
+    Beef patty, cheddar cheese, romaine lettuce, tomato, burger sauce
     </description>
     <calories>890</calories>
  </menuitem>
 
 <menuitem>
   <type>drink</type>
+  <diet>vegan</diet>
   <drinkcategory>soft</drinkcategory>
 	<name>Cola</name>
 	<price>$1.99</price>
+  <description>
+    300 ml
+  </description>
+  <calories>112</calories>
   </menuitem>
   
 <menuitem>
   <type>drink</type>
+  <diet>vegan</diet>
   <drinkcategory>soft</drinkcategory>
 	<name>Lemonade with lime</name>
+  <description>
+    300 ml
+  </description>
 	<price>$2.99</price>
+  <calories>80</calories>
 </menuitem>
 
 <menuitem>
   <type>drink</type>
+  <diet>vegan</diet>
   <drinkcategory>soft</drinkcategory>
 	<name> Elite tonic</name>
 	<price>$3.99</price>
+  <description>
+    300 ml
+  </description>
+  <calories>98</calories>
 </menuitem>
 
 <menuitem>
   <type>drink</type>
+  <diet>vegan</diet>
   <drinkcategory>tea</drinkcategory>
 	<name> Peppermint Tea</name>
+  <description>
+    250 ml
+  </description>
 	<price>$1.99</price>
+  <calories>3</calories>
 </menuitem>
 
 <menuitem>
   <type>drink</type>
+  <diet>vegan</diet>
   <drinkcategory>tea</drinkcategory>
 	<name> Roiboos Tea</name>
+  <description>
+    250 ml
+  </description>
+  <calories>4</calories>
 	<price>$0.99</price>
 </menuitem>
 
 <menuitem>
   <type>drink</type>
+  <diet>vegan</diet>
   <drinkcategory>tea</drinkcategory>
 	<name> Green Tea</name>
+  <description>
+    250 ml
+  </description>
+  <calories>2</calories>
 	<price>$1.49</price>
 </menuitem>
 </menuitems>
