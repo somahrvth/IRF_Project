@@ -138,6 +138,20 @@ namespace Beadando_GX4ZPC_IRF
             dgv_order.Columns[4].HeaderText = "Price";
 
         }
+
+        private void button_reset_Click(object sender, EventArgs e)
+        {
+            dgv_order.DataSource = null;
+            order.Clear();
+            
+            
+        }
+
+        private void button_random_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            
+        }
     }
     }
     

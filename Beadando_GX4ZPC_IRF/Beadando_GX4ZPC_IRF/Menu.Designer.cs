@@ -134,7 +134,7 @@
             this.label_order.AutoSize = true;
             this.label_order.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_order.ForeColor = System.Drawing.Color.LightGreen;
-            this.label_order.Location = new System.Drawing.Point(176, 500);
+            this.label_order.Location = new System.Drawing.Point(111, 481);
             this.label_order.Name = "label_order";
             this.label_order.Size = new System.Drawing.Size(123, 35);
             this.label_order.TabIndex = 6;
@@ -171,7 +171,7 @@
             this.button_pick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_pick.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_pick.ForeColor = System.Drawing.Color.LightGreen;
-            this.button_pick.Location = new System.Drawing.Point(212, 423);
+            this.button_pick.Location = new System.Drawing.Point(117, 423);
             this.button_pick.Name = "button_pick";
             this.button_pick.Size = new System.Drawing.Size(87, 40);
             this.button_pick.TabIndex = 9;
@@ -190,18 +190,20 @@
             this.button_random.TabIndex = 10;
             this.button_random.Text = "CHEF\'S OFFER";
             this.button_random.UseVisualStyleBackColor = true;
+            this.button_random.Click += new System.EventHandler(this.button_random_Click);
             // 
             // button_reset
             // 
             this.button_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_reset.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_reset.ForeColor = System.Drawing.Color.LightGreen;
-            this.button_reset.Location = new System.Drawing.Point(373, 423);
+            this.button_reset.Location = new System.Drawing.Point(282, 423);
             this.button_reset.Name = "button_reset";
             this.button_reset.Size = new System.Drawing.Size(87, 40);
             this.button_reset.TabIndex = 11;
             this.button_reset.Text = "RESET";
             this.button_reset.UseVisualStyleBackColor = true;
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
             // 
             // dgv_order
             // 
@@ -215,9 +217,9 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dgv_order.Location = new System.Drawing.Point(373, 481);
+            this.dgv_order.Location = new System.Drawing.Point(282, 481);
             this.dgv_order.Name = "dgv_order";
-            this.dgv_order.Size = new System.Drawing.Size(243, 263);
+            this.dgv_order.Size = new System.Drawing.Size(243, 272);
             this.dgv_order.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
