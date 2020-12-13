@@ -119,17 +119,24 @@ namespace Beadando_GX4ZPC_IRF
             string description = dgv_menu.CurrentRow.Cells[5].Value.ToString();
             string calories = dgv_menu.CurrentRow.Cells[6].Value.ToString();
 
-
+            
             var o= new MenuItems();
-            order.Add(o);
+            
             o.name = name;
             o.type = type;
             o.price = price;
             o.diet = diet;
             o.description = description;
             o.calories = calories;
-            
+            order.Add(o);
             dgv_order.DataSource = order;
+            dgv_order.Columns[1].Visible = false;
+            dgv_order.Columns[2].Visible = false;
+            dgv_order.Columns[5].Visible = false;
+            dgv_order.Columns[6].Visible = false;
+            dgv_order.Columns[3].HeaderText = "Menu";
+            dgv_order.Columns[4].HeaderText = "Price";
+
         }
     }
     }
