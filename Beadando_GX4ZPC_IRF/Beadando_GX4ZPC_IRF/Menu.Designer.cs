@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_menu = new System.Windows.Forms.DataGridView();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Leírás = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Calories = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,22 +37,29 @@
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Drinkcategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox_searchbar = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label_order = new System.Windows.Forms.Label();
             this.comboBox_options = new System.Windows.Forms.ComboBox();
             this.label_search = new System.Windows.Forms.Label();
             this.button_pick = new System.Windows.Forms.Button();
             this.button_random = new System.Windows.Forms.Button();
             this.button_reset = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.dgv_order = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_order)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_menu
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGreen;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_menu.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.dgv_menu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_menu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
             this.Leírás,
             this.Calories,
@@ -60,10 +67,10 @@
             this.Diet,
             this.Type,
             this.Drinkcategory});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 86);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 331);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_menu.Location = new System.Drawing.Point(21, 86);
+            this.dgv_menu.Name = "dgv_menu";
+            this.dgv_menu.Size = new System.Drawing.Size(744, 331);
+            this.dgv_menu.TabIndex = 0;
             // 
             // name
             // 
@@ -122,20 +129,12 @@
             this.textBox_searchbar.TabIndex = 4;
             this.textBox_searchbar.TextChanged += new System.EventHandler(this.textBox_searchbar_TextChanged);
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(137, 469);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(628, 224);
-            this.dataGridView2.TabIndex = 5;
-            // 
             // label_order
             // 
             this.label_order.AutoSize = true;
             this.label_order.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_order.ForeColor = System.Drawing.Color.LightGreen;
-            this.label_order.Location = new System.Drawing.Point(12, 469);
+            this.label_order.Location = new System.Drawing.Point(176, 500);
             this.label_order.Name = "label_order";
             this.label_order.Size = new System.Drawing.Size(123, 35);
             this.label_order.TabIndex = 6;
@@ -178,6 +177,7 @@
             this.button_pick.TabIndex = 9;
             this.button_pick.Text = "PICK";
             this.button_pick.UseVisualStyleBackColor = true;
+            this.button_pick.Click += new System.EventHandler(this.button_pick_Click);
             // 
             // button_random
             // 
@@ -203,26 +203,94 @@
             this.button_reset.Text = "RESET";
             this.button_reset.UseVisualStyleBackColor = true;
             // 
+            // dgv_order
+            // 
+            this.dgv_order.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.dgv_order.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_order.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.dgv_order.Location = new System.Drawing.Point(373, 481);
+            this.dgv_order.Name = "dgv_order";
+            this.dgv_order.Size = new System.Drawing.Size(243, 263);
+            this.dgv_order.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Menu";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "price";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "description";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Description";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            this.dataGridViewTextBoxColumn2.Width = 400;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "calories";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Calories";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "diet";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Diet";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            this.dataGridViewTextBoxColumn5.Width = 51;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "type";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            this.dataGridViewTextBoxColumn6.Width = 56;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "drinkcategory";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Drinkcategory";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            this.dataGridViewTextBoxColumn7.Width = 98;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 777);
+            this.Controls.Add(this.dgv_order);
             this.Controls.Add(this.button_reset);
             this.Controls.Add(this.button_random);
             this.Controls.Add(this.button_pick);
             this.Controls.Add(this.label_search);
             this.Controls.Add(this.comboBox_options);
             this.Controls.Add(this.label_order);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox_searchbar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_menu);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Menu";
             this.Text = "Vegan";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_order)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,7 +298,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_menu;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Leírás;
         private System.Windows.Forms.DataGridViewTextBoxColumn Calories;
@@ -239,12 +307,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Drinkcategory;
         private System.Windows.Forms.TextBox textBox_searchbar;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label_order;
         private System.Windows.Forms.ComboBox comboBox_options;
         private System.Windows.Forms.Label label_search;
         private System.Windows.Forms.Button button_pick;
         private System.Windows.Forms.Button button_random;
         private System.Windows.Forms.Button button_reset;
+        private System.Windows.Forms.DataGridView dgv_order;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

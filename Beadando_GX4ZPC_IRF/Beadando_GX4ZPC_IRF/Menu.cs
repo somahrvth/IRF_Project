@@ -18,6 +18,7 @@ namespace Beadando_GX4ZPC_IRF
     public partial class Menu : Form
     {
         List<MenuItems> menulist = new List<MenuItems>();
+        List<MenuItems> order = new List<MenuItems>();
         DataTable dt = new DataTable();
         public Menu()
         {
@@ -56,7 +57,7 @@ namespace Beadando_GX4ZPC_IRF
                 
             }
 
-            dataGridView1.DataSource = menulist;
+            dgv_menu.DataSource = menulist;
 
 
 
@@ -67,7 +68,7 @@ namespace Beadando_GX4ZPC_IRF
             comboBox_options.SelectedItem = "Menu";
             var searchedList = menulist.Where(p => p.name.ToLower().Contains(textBox_searchbar.Text.ToLower()) ||
                                              p.description.ToLower().Contains(textBox_searchbar.Text.ToLower())).ToList();
-            dataGridView1.DataSource = searchedList;
+            dgv_menu.DataSource = searchedList;
         }
 
         private void comboBox_options_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,7 +77,7 @@ namespace Beadando_GX4ZPC_IRF
             if (comboBox_options.SelectedIndex == 0)
             {
                 var veganlist = menulist.Where(p => p.diet == "vegan" && p.type=="food").ToList();
-                dataGridView1.DataSource = veganlist;
+                dgv_menu.DataSource = veganlist;
             }
 
             else
@@ -84,14 +85,14 @@ namespace Beadando_GX4ZPC_IRF
                 if (comboBox_options.SelectedIndex == 1)
                 {
                     var veganlist = menulist.Where(p => p.diet == "meatlover").ToList();
-                    dataGridView1.DataSource = veganlist;
+                    dgv_menu.DataSource = veganlist;
                 }
                 else
                 {
                     if (comboBox_options.SelectedIndex == 2)
                     {
                         var veganlist = menulist.Where(p => p.type == "drink").ToList();
-                        dataGridView1.DataSource = veganlist;
+                        dgv_menu.DataSource = veganlist;
                     }
 
                     else
@@ -99,14 +100,37 @@ namespace Beadando_GX4ZPC_IRF
                         if (comboBox_options.SelectedIndex == 3)
                         {
 
-                            dataGridView1.DataSource = menulist;
+                            dgv_menu.DataSource = menulist;
                         }
                     }
                 }
             }
         }
+        
+        private void button_pick_Click(object sender, EventArgs e)
+        {
 
-       
+            dgv_order.DataSource = null;
+
+            string name = dgv_menu.CurrentRow.Cells[3].Value.ToString();
+            string type = dgv_menu.CurrentRow.Cells[1].Value.ToString();
+            string price = dgv_menu.CurrentRow.Cells[4].Value.ToString();
+            string diet = dgv_menu.CurrentRow.Cells[2].Value.ToString();
+            string description = dgv_menu.CurrentRow.Cells[5].Value.ToString();
+            string calories = dgv_menu.CurrentRow.Cells[6].Value.ToString();
+
+
+            var o= new MenuItems();
+            order.Add(o);
+            o.name = name;
+            o.type = type;
+            o.price = price;
+            o.diet = diet;
+            o.description = description;
+            o.calories = calories;
+            
+            dgv_order.DataSource = order;
+        }
     }
     }
     
