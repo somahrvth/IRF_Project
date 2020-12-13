@@ -16,13 +16,18 @@ namespace Beadando_GX4ZPC_IRF
         {
             InitializeComponent();
             this.CenterToScreen();
+            this.Text = "Green Palace";
         }
 
         private void menu_button_Click(object sender, EventArgs e)
         {
-            Vegan_or_Meatlover vom = new Vegan_or_Meatlover();
-            vom.Show();
+            Menu m = new Menu();
+            m.Show();
             this.Hide();
+
+           
         }
+
+       
     }
 }

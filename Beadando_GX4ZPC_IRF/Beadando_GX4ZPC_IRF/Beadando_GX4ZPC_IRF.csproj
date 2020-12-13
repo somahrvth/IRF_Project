@@ -53,25 +53,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Meatlover.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Meatlover.Designer.cs">
-      <DependentUpon>Meatlover.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vegan.cs">
+    <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vegan.Designer.cs">
-      <DependentUpon>Vegan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vegan_or_Meatlover.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vegan_or_Meatlover.Designer.cs">
-      <DependentUpon>Vegan_or_Meatlover.cs</DependentUpon>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -85,11 +73,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vegan.resx">
-      <DependentUpon>Vegan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vegan_or_Meatlover.resx">
-      <DependentUpon>Vegan_or_Meatlover.cs</DependentUpon>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

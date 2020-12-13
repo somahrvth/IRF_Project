@@ -1,6 +1,6 @@
 ﻿namespace Beadando_GX4ZPC_IRF
 {
-    partial class Vegan
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -36,19 +36,21 @@
             this.Diet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Drinkcategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkBox_vegan = new System.Windows.Forms.CheckBox();
-            this.checkBox_meatlover = new System.Windows.Forms.CheckBox();
-            this.checkBox_drinks = new System.Windows.Forms.CheckBox();
             this.textBox_searchbar = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_order = new System.Windows.Forms.Label();
             this.comboBox_options = new System.Windows.Forms.ComboBox();
+            this.label_search = new System.Windows.Forms.Label();
+            this.button_pick = new System.Windows.Forms.Button();
+            this.button_random = new System.Windows.Forms.Button();
+            this.button_reset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGreen;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
@@ -60,7 +62,7 @@
             this.Drinkcategory});
             this.dataGridView1.Location = new System.Drawing.Point(21, 86);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(744, 334);
+            this.dataGridView1.Size = new System.Drawing.Size(744, 331);
             this.dataGridView1.TabIndex = 0;
             // 
             // name
@@ -112,61 +114,32 @@
             this.Drinkcategory.Visible = false;
             this.Drinkcategory.Width = 98;
             // 
-            // checkBox_vegan
-            // 
-            this.checkBox_vegan.AutoSize = true;
-            this.checkBox_vegan.Location = new System.Drawing.Point(582, 13);
-            this.checkBox_vegan.Name = "checkBox_vegan";
-            this.checkBox_vegan.Size = new System.Drawing.Size(57, 17);
-            this.checkBox_vegan.TabIndex = 1;
-            this.checkBox_vegan.Text = "Vegan";
-            this.checkBox_vegan.UseVisualStyleBackColor = true;
-            this.checkBox_vegan.CheckedChanged += new System.EventHandler(this.checkBox_vegan_CheckedChanged);
-            // 
-            // checkBox_meatlover
-            // 
-            this.checkBox_meatlover.AutoSize = true;
-            this.checkBox_meatlover.Location = new System.Drawing.Point(582, 36);
-            this.checkBox_meatlover.Name = "checkBox_meatlover";
-            this.checkBox_meatlover.Size = new System.Drawing.Size(73, 17);
-            this.checkBox_meatlover.TabIndex = 2;
-            this.checkBox_meatlover.Text = "Meatlover";
-            this.checkBox_meatlover.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_drinks
-            // 
-            this.checkBox_drinks.AutoSize = true;
-            this.checkBox_drinks.Location = new System.Drawing.Point(582, 59);
-            this.checkBox_drinks.Name = "checkBox_drinks";
-            this.checkBox_drinks.Size = new System.Drawing.Size(56, 17);
-            this.checkBox_drinks.TabIndex = 3;
-            this.checkBox_drinks.Text = "Drinks";
-            this.checkBox_drinks.UseVisualStyleBackColor = true;
-            // 
             // textBox_searchbar
             // 
-            this.textBox_searchbar.Location = new System.Drawing.Point(68, 33);
+            this.textBox_searchbar.Location = new System.Drawing.Point(107, 33);
             this.textBox_searchbar.Name = "textBox_searchbar";
-            this.textBox_searchbar.Size = new System.Drawing.Size(183, 20);
+            this.textBox_searchbar.Size = new System.Drawing.Size(192, 20);
             this.textBox_searchbar.TabIndex = 4;
             this.textBox_searchbar.TextChanged += new System.EventHandler(this.textBox_searchbar_TextChanged);
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(123, 521);
+            this.dataGridView2.Location = new System.Drawing.Point(137, 469);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(546, 193);
+            this.dataGridView2.Size = new System.Drawing.Size(628, 224);
             this.dataGridView2.TabIndex = 5;
             // 
-            // label1
+            // label_order
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(370, 468);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Ya Orda";
+            this.label_order.AutoSize = true;
+            this.label_order.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_order.ForeColor = System.Drawing.Color.LightGreen;
+            this.label_order.Location = new System.Drawing.Point(12, 469);
+            this.label_order.Name = "label_order";
+            this.label_order.Size = new System.Drawing.Size(123, 35);
+            this.label_order.TabIndex = 6;
+            this.label_order.Text = "Your Order :";
             // 
             // comboBox_options
             // 
@@ -176,27 +149,77 @@
             "Meatlover",
             "Drinks",
             "Menu"});
-            this.comboBox_options.Location = new System.Drawing.Point(328, 32);
+            this.comboBox_options.Location = new System.Drawing.Point(373, 31);
             this.comboBox_options.Name = "comboBox_options";
             this.comboBox_options.Size = new System.Drawing.Size(152, 21);
             this.comboBox_options.TabIndex = 7;
             this.comboBox_options.Text = "Choose your preference";
             this.comboBox_options.SelectedIndexChanged += new System.EventHandler(this.comboBox_options_SelectedIndexChanged);
             // 
-            // Vegan
+            // label_search
+            // 
+            this.label_search.AutoSize = true;
+            this.label_search.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_search.ForeColor = System.Drawing.Color.LightGreen;
+            this.label_search.Location = new System.Drawing.Point(36, 28);
+            this.label_search.Name = "label_search";
+            this.label_search.Size = new System.Drawing.Size(65, 25);
+            this.label_search.TabIndex = 8;
+            this.label_search.Text = "Search:";
+            // 
+            // button_pick
+            // 
+            this.button_pick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_pick.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_pick.ForeColor = System.Drawing.Color.LightGreen;
+            this.button_pick.Location = new System.Drawing.Point(212, 423);
+            this.button_pick.Name = "button_pick";
+            this.button_pick.Size = new System.Drawing.Size(87, 40);
+            this.button_pick.TabIndex = 9;
+            this.button_pick.Text = "PICK";
+            this.button_pick.UseVisualStyleBackColor = true;
+            // 
+            // button_random
+            // 
+            this.button_random.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_random.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_random.ForeColor = System.Drawing.Color.LightGreen;
+            this.button_random.Location = new System.Drawing.Point(616, 423);
+            this.button_random.Name = "button_random";
+            this.button_random.Size = new System.Drawing.Size(149, 40);
+            this.button_random.TabIndex = 10;
+            this.button_random.Text = "CHEF\'S OFFER";
+            this.button_random.UseVisualStyleBackColor = true;
+            // 
+            // button_reset
+            // 
+            this.button_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_reset.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_reset.ForeColor = System.Drawing.Color.LightGreen;
+            this.button_reset.Location = new System.Drawing.Point(373, 423);
+            this.button_reset.Name = "button_reset";
+            this.button_reset.Size = new System.Drawing.Size(87, 40);
+            this.button_reset.TabIndex = 11;
+            this.button_reset.Text = "RESET";
+            this.button_reset.UseVisualStyleBackColor = true;
+            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 777);
+            this.Controls.Add(this.button_reset);
+            this.Controls.Add(this.button_random);
+            this.Controls.Add(this.button_pick);
+            this.Controls.Add(this.label_search);
             this.Controls.Add(this.comboBox_options);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_order);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.textBox_searchbar);
-            this.Controls.Add(this.checkBox_drinks);
-            this.Controls.Add(this.checkBox_meatlover);
-            this.Controls.Add(this.checkBox_vegan);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Vegan";
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Name = "Menu";
             this.Text = "Vegan";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -215,12 +238,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Diet;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Drinkcategory;
-        private System.Windows.Forms.CheckBox checkBox_vegan;
-        private System.Windows.Forms.CheckBox checkBox_meatlover;
-        private System.Windows.Forms.CheckBox checkBox_drinks;
         private System.Windows.Forms.TextBox textBox_searchbar;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_order;
         private System.Windows.Forms.ComboBox comboBox_options;
+        private System.Windows.Forms.Label label_search;
+        private System.Windows.Forms.Button button_pick;
+        private System.Windows.Forms.Button button_random;
+        private System.Windows.Forms.Button button_reset;
     }
 }
