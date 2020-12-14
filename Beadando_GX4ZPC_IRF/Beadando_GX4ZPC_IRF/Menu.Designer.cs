@@ -77,6 +77,7 @@
             this.name.DataPropertyName = "name";
             this.name.HeaderText = "Menu";
             this.name.Name = "name";
+            this.name.Width = 140;
             // 
             // Leírás
             // 
@@ -96,6 +97,7 @@
             this.Price.DataPropertyName = "price";
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
+            this.Price.Width = 60;
             // 
             // Diet
             // 
@@ -136,12 +138,13 @@
             this.label_order.ForeColor = System.Drawing.Color.LightGreen;
             this.label_order.Location = new System.Drawing.Point(111, 481);
             this.label_order.Name = "label_order";
-            this.label_order.Size = new System.Drawing.Size(123, 35);
+            this.label_order.Size = new System.Drawing.Size(139, 35);
             this.label_order.TabIndex = 6;
-            this.label_order.Text = "Your Order :";
+            this.label_order.Text = "YOUR ORDER :";
             // 
             // comboBox_options
             // 
+            this.comboBox_options.BackColor = System.Drawing.Color.White;
             this.comboBox_options.FormattingEnabled = true;
             this.comboBox_options.Items.AddRange(new object[] {
             "Vegan",
@@ -162,9 +165,9 @@
             this.label_search.ForeColor = System.Drawing.Color.LightGreen;
             this.label_search.Location = new System.Drawing.Point(36, 28);
             this.label_search.Name = "label_search";
-            this.label_search.Size = new System.Drawing.Size(65, 25);
+            this.label_search.Size = new System.Drawing.Size(68, 25);
             this.label_search.TabIndex = 8;
-            this.label_search.Text = "Search:";
+            this.label_search.Text = "SEARCH:";
             // 
             // button_pick
             // 
@@ -301,13 +304,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_menu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Leírás;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Calories;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Diet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Drinkcategory;
         private System.Windows.Forms.TextBox textBox_searchbar;
         private System.Windows.Forms.Label label_order;
         private System.Windows.Forms.ComboBox comboBox_options;
@@ -323,5 +319,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Leírás;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Calories;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Drinkcategory;
     }
 }

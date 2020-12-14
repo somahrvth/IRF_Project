@@ -143,14 +143,47 @@ namespace Beadando_GX4ZPC_IRF
         {
             dgv_order.DataSource = null;
             order.Clear();
-            
+                  
             
         }
 
         private void button_random_Click(object sender, EventArgs e)
         {
+            dgv_order.DataSource = null;
             Random rnd = new Random();
-            
+            int rndsor = rnd.Next(0, 14);
+
+
+            string name = dgv_menu.Rows[rndsor].Cells[3].Value.ToString();
+            string type = dgv_menu.Rows[rndsor].Cells[1].Value.ToString();
+            string price = dgv_menu.Rows[rndsor].Cells[4].Value.ToString();
+            string diet = dgv_menu.Rows[rndsor].Cells[2].Value.ToString();
+            string description = dgv_menu.Rows[rndsor].Cells[5].Value.ToString();
+            string calories = dgv_menu.Rows[rndsor].Cells[6].Value.ToString();
+
+           
+            var o = new MenuItems();
+
+            o.name = name;
+            o.type = type;
+            o.price = price;
+            o.diet = diet;
+            o.description = description;
+            o.calories = calories;
+            order.Add(o);
+
+            dgv_order.DataSource = order;
+            dgv_order.Columns[1].Visible = false;
+            dgv_order.Columns[2].Visible = false;
+            dgv_order.Columns[5].Visible = false;
+            dgv_order.Columns[6].Visible = false;
+            dgv_order.Columns[3].HeaderText = "Menu";
+            dgv_order.Columns[4].HeaderText = "Price";
+
+
+
+
+
         }
     }
     }
