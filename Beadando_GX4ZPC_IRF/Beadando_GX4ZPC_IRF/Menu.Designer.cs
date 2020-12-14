@@ -51,6 +51,8 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_confirm = new System.Windows.Forms.Button();
+            this.button_help = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_order)).BeginInit();
             this.SuspendLayout();
@@ -150,7 +152,7 @@
             "Vegan",
             "Meatlover",
             "Drinks",
-            "Menu"});
+            "Full Menu"});
             this.comboBox_options.Location = new System.Drawing.Point(373, 31);
             this.comboBox_options.Name = "comboBox_options";
             this.comboBox_options.Size = new System.Drawing.Size(152, 21);
@@ -174,7 +176,7 @@
             this.button_pick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_pick.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_pick.ForeColor = System.Drawing.Color.LightGreen;
-            this.button_pick.Location = new System.Drawing.Point(117, 423);
+            this.button_pick.Location = new System.Drawing.Point(163, 423);
             this.button_pick.Name = "button_pick";
             this.button_pick.Size = new System.Drawing.Size(87, 40);
             this.button_pick.TabIndex = 9;
@@ -186,7 +188,7 @@
             // 
             this.button_random.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_random.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_random.ForeColor = System.Drawing.Color.LightGreen;
+            this.button_random.ForeColor = System.Drawing.Color.Yellow;
             this.button_random.Location = new System.Drawing.Point(616, 423);
             this.button_random.Name = "button_random";
             this.button_random.Size = new System.Drawing.Size(149, 40);
@@ -200,7 +202,7 @@
             this.button_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_reset.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_reset.ForeColor = System.Drawing.Color.LightGreen;
-            this.button_reset.Location = new System.Drawing.Point(282, 423);
+            this.button_reset.Location = new System.Drawing.Point(438, 423);
             this.button_reset.Name = "button_reset";
             this.button_reset.Size = new System.Drawing.Size(87, 40);
             this.button_reset.TabIndex = 11;
@@ -276,12 +278,38 @@
             this.dataGridViewTextBoxColumn7.Visible = false;
             this.dataGridViewTextBoxColumn7.Width = 98;
             // 
+            // button_confirm
+            // 
+            this.button_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_confirm.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_confirm.ForeColor = System.Drawing.Color.LightGreen;
+            this.button_confirm.Location = new System.Drawing.Point(117, 668);
+            this.button_confirm.Name = "button_confirm";
+            this.button_confirm.Size = new System.Drawing.Size(133, 40);
+            this.button_confirm.TabIndex = 13;
+            this.button_confirm.Text = "CONFIRM";
+            this.button_confirm.UseVisualStyleBackColor = true;
+            // 
+            // button_help
+            // 
+            this.button_help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_help.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_help.ForeColor = System.Drawing.Color.LightGreen;
+            this.button_help.Location = new System.Drawing.Point(632, 668);
+            this.button_help.Name = "button_help";
+            this.button_help.Size = new System.Drawing.Size(133, 40);
+            this.button_help.TabIndex = 14;
+            this.button_help.Text = "HELP";
+            this.button_help.UseVisualStyleBackColor = true;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 777);
+            this.Controls.Add(this.button_help);
+            this.Controls.Add(this.button_confirm);
             this.Controls.Add(this.dgv_order);
             this.Controls.Add(this.button_reset);
             this.Controls.Add(this.button_random);
@@ -326,5 +354,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Diet;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Drinkcategory;
+        private System.Windows.Forms.Button button_confirm;
+        private System.Windows.Forms.Button button_help;
     }
 }

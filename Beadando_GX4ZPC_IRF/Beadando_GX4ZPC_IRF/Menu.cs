@@ -202,7 +202,7 @@ namespace Beadando_GX4ZPC_IRF
             }
             catch (Exception)
             {
-                MessageBox.Show("The Chef's offer function only works when the whole menu is on display.");
+                MessageBox.Show("The Chef's offer feature only works when the full menu is on display.");
             }
            
 
