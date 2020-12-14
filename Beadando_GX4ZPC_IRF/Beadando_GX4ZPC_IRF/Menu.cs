@@ -149,36 +149,62 @@ namespace Beadando_GX4ZPC_IRF
 
         private void button_random_Click(object sender, EventArgs e)
         {
-            dgv_order.DataSource = null;
-            Random rnd = new Random();
-            int rndsor = rnd.Next(0, 14);
+            try
+            {
+                dgv_order.DataSource = null;
+                Random rnd = new Random();
+                int rndfood = rnd.Next(0, 8);
+                int rnddrink = rnd.Next(9, 14);
 
 
-            string name = dgv_menu.Rows[rndsor].Cells[3].Value.ToString();
-            string type = dgv_menu.Rows[rndsor].Cells[1].Value.ToString();
-            string price = dgv_menu.Rows[rndsor].Cells[4].Value.ToString();
-            string diet = dgv_menu.Rows[rndsor].Cells[2].Value.ToString();
-            string description = dgv_menu.Rows[rndsor].Cells[5].Value.ToString();
-            string calories = dgv_menu.Rows[rndsor].Cells[6].Value.ToString();
+                string name = dgv_menu.Rows[rndfood].Cells[3].Value.ToString();
+                string type = dgv_menu.Rows[rndfood].Cells[1].Value.ToString();
+                string price = dgv_menu.Rows[rndfood].Cells[4].Value.ToString();
+                string diet = dgv_menu.Rows[rndfood].Cells[2].Value.ToString();
+                string description = dgv_menu.Rows[rndfood].Cells[5].Value.ToString();
+                string calories = dgv_menu.Rows[rndfood].Cells[6].Value.ToString();
 
+                string name_drink = dgv_menu.Rows[rnddrink].Cells[3].Value.ToString();
+                string type_drink = dgv_menu.Rows[rnddrink].Cells[1].Value.ToString();
+                string price_drink = dgv_menu.Rows[rnddrink].Cells[4].Value.ToString();
+                string diet_drink = dgv_menu.Rows[rnddrink].Cells[2].Value.ToString();
+                string description_drink = dgv_menu.Rows[rnddrink].Cells[5].Value.ToString();
+                string calories_drink = dgv_menu.Rows[rnddrink].Cells[6].Value.ToString();
+
+
+                var o = new MenuItems();
+
+                o.name = name;
+                o.type = type;
+                o.price = price;
+                o.diet = diet;
+                o.description = description;
+                o.calories = calories;
+                order.Add(o);
+
+                var o_drink = new MenuItems();
+
+                o_drink.name = name_drink;
+                o_drink.type = type_drink;
+                o_drink.price = price_drink;
+                o_drink.diet = diet_drink;
+                o_drink.description = description_drink;
+                o_drink.calories = calories_drink;
+                order.Add(o_drink);
+
+                dgv_order.DataSource = order;
+                dgv_order.Columns[1].Visible = false;
+                dgv_order.Columns[2].Visible = false;
+                dgv_order.Columns[5].Visible = false;
+                dgv_order.Columns[6].Visible = false;
+                dgv_order.Columns[3].HeaderText = "Menu";
+                dgv_order.Columns[4].HeaderText = "Price";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("The Chef's offer function only works when the whole menu is on display.");
+            }
            
-            var o = new MenuItems();
-
-            o.name = name;
-            o.type = type;
-            o.price = price;
-            o.diet = diet;
-            o.description = description;
-            o.calories = calories;
-            order.Add(o);
-
-            dgv_order.DataSource = order;
-            dgv_order.Columns[1].Visible = false;
-            dgv_order.Columns[2].Visible = false;
-            dgv_order.Columns[5].Visible = false;
-            dgv_order.Columns[6].Visible = false;
-            dgv_order.Columns[3].HeaderText = "Menu";
-            dgv_order.Columns[4].HeaderText = "Price";
 
 
 
