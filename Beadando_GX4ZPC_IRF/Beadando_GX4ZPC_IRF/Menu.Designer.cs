@@ -304,6 +304,7 @@
             this.button_help.TabIndex = 14;
             this.button_help.Text = "HELP";
             this.button_help.UseVisualStyleBackColor = true;
+            this.button_help.Click += new System.EventHandler(this.button_help_Click);
             // 
             // pb_design
             // 
@@ -336,6 +337,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Menu";
             this.Text = "Vegan";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_order)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_design)).EndInit();

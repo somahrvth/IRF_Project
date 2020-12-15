@@ -20,7 +20,7 @@ namespace Beadando_GX4ZPC_IRF
     {
         List<MenuItems> menulist = new List<MenuItems>();
         List<MenuItems> order = new List<MenuItems>();
-        DataTable dt = new DataTable();
+        //DataTable dt = new DataTable();
         public Menu()
         {
             InitializeComponent();
@@ -152,9 +152,10 @@ namespace Beadando_GX4ZPC_IRF
 
         private void button_random_Click(object sender, EventArgs e)
         {
+            pb_design.Hide();
             try
             {
-                dgv_order.DataSource = null;
+                
                 Random rnd = new Random();
                 int rndfood = rnd.Next(0, 8);
                 int rnddrink = rnd.Next(9, 14);
@@ -195,6 +196,8 @@ namespace Beadando_GX4ZPC_IRF
                 o_drink.calories = calories_drink;
                 order.Add(o_drink);
 
+                dgv_order.DataSource = null;
+
                 dgv_order.DataSource = order;
                 dgv_order.Columns[1].Visible = false;
                 dgv_order.Columns[2].Visible = false;
@@ -205,7 +208,9 @@ namespace Beadando_GX4ZPC_IRF
             }
             catch (Exception)
             {
+               
                 MessageBox.Show("The Chef's offer feature only works when the full menu is on display.");
+                
             }
            
 
@@ -244,6 +249,16 @@ namespace Beadando_GX4ZPC_IRF
             }
 
 
+        }
+
+        private void button_help_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Use the search bars or the filter above to browse the menu. Select the row of your item of choice and select 'pick'. You can confirm your purchase with the 'confirm' button.");
+        }
+
+        private void Menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
     }
