@@ -110,7 +110,7 @@ namespace Beadando_GX4ZPC_IRF
         
         private void button_pick_Click(object sender, EventArgs e)
         {
-
+            pb_design.Hide();
             dgv_order.DataSource = null;
 
             string name = dgv_menu.CurrentRow.Cells[3].Value.ToString();
@@ -142,10 +142,12 @@ namespace Beadando_GX4ZPC_IRF
 
         private void button_reset_Click(object sender, EventArgs e)
         {
+            pb_design.Show();
             dgv_order.DataSource = null;
-            order.Clear();
-                  
             
+            order.Clear();
+            
+
         }
 
         private void button_random_Click(object sender, EventArgs e)
@@ -217,6 +219,8 @@ namespace Beadando_GX4ZPC_IRF
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.ShowDialog();
+            Random rndid = new Random();
+            int id = rndid.Next(0, 99999999);
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
@@ -232,6 +236,10 @@ namespace Beadando_GX4ZPC_IRF
                         sw.Write(";");
                         sw.WriteLine(o_item.price);
                     }
+
+                    sw.Write("ID:");
+                    sw.Write(";");
+                    sw.WriteLine(id);
                 }
             }
 

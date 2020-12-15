@@ -53,8 +53,10 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button_confirm = new System.Windows.Forms.Button();
             this.button_help = new System.Windows.Forms.Button();
+            this.pb_design = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_order)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_design)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_menu
@@ -303,12 +305,23 @@
             this.button_help.Text = "HELP";
             this.button_help.UseVisualStyleBackColor = true;
             // 
+            // pb_design
+            // 
+            this.pb_design.BackColor = System.Drawing.Color.LightGreen;
+            this.pb_design.Location = new System.Drawing.Point(283, 482);
+            this.pb_design.Name = "pb_design";
+            this.pb_design.Size = new System.Drawing.Size(42, 44);
+            this.pb_design.TabIndex = 15;
+            this.pb_design.TabStop = false;
+            this.pb_design.Visible = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 777);
+            this.Controls.Add(this.pb_design);
             this.Controls.Add(this.button_help);
             this.Controls.Add(this.button_confirm);
             this.Controls.Add(this.dgv_order);
@@ -325,6 +338,7 @@
             this.Text = "Vegan";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_order)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_design)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,5 +371,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Drinkcategory;
         private System.Windows.Forms.Button button_confirm;
         private System.Windows.Forms.Button button_help;
+        private System.Windows.Forms.PictureBox pb_design;
     }
 }
