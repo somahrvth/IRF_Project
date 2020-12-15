@@ -138,7 +138,7 @@
             this.label_order.AutoSize = true;
             this.label_order.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label_order.ForeColor = System.Drawing.Color.LightGreen;
-            this.label_order.Location = new System.Drawing.Point(111, 481);
+            this.label_order.Location = new System.Drawing.Point(121, 481);
             this.label_order.Name = "label_order";
             this.label_order.Size = new System.Drawing.Size(139, 35);
             this.label_order.TabIndex = 6;
@@ -289,6 +289,7 @@
             this.button_confirm.TabIndex = 13;
             this.button_confirm.Text = "CONFIRM";
             this.button_confirm.UseVisualStyleBackColor = true;
+            this.button_confirm.Click += new System.EventHandler(this.button_confirm_Click);
             // 
             // button_help
             // 

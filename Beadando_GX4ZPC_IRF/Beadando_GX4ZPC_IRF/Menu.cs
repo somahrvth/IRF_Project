@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -208,6 +209,31 @@ namespace Beadando_GX4ZPC_IRF
 
 
 
+
+
+        }
+
+        private void button_confirm_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.ShowDialog();
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.UTF8))
+                {
+                    sw.Write("Menu");
+                    sw.Write(";");
+                    sw.WriteLine("Price");
+
+                    foreach (var o_item in order)
+                    {
+                        sw.Write(o_item.name);
+                        sw.Write(";");
+                        sw.WriteLine(o_item.price);
+                    }
+                }
+            }
 
 
         }
