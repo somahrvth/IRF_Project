@@ -20,7 +20,7 @@ namespace Beadando_GX4ZPC_IRF
     {
         List<MenuItems> menulist = new List<MenuItems>();
         List<MenuItems> order = new List<MenuItems>();
-        //DataTable dt = new DataTable();
+        
         public Menu()
         {
             InitializeComponent();
@@ -253,7 +253,7 @@ namespace Beadando_GX4ZPC_IRF
 
         private void button_help_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Use the search bars or the filter above to browse the menu. Select the row of your item of choice and select 'pick'. You can confirm your purchase with the 'confirm' button.");
+            MessageBox.Show("Use the search bars or the filter above to browse the menu. Select the row of your item of choice and select 'pick'. You can finalize your order with the 'confirm' button.");
         }
 
         private void Menu_FormClosed(object sender, FormClosedEventArgs e)
